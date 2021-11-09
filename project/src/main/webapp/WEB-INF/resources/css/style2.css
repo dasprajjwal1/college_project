@@ -1,0 +1,143 @@
+
+/* STyle for Login and Registration part Starts */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.loginNregistercontainer{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background: rgb(153, 153, 231);
+    color: rgb(255, 255, 255);
+
+    /* placing card at center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+    perspective: 1000px;
+}
+
+.inner-box {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    /* rotate login and register  */
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    transition: transform 2s;
+    
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(150, 58, 255), rgba(8, 27, 3, 0.397)),url(key.jpg);
+    padding: 55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transition: ease-in-out .5s;
+}
+
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card h2 {
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(22, 3, 34);
+   
+}
+
+.input-box {
+    width: 100%;
+    background: transparent;
+    border: 3px solid rgb(0, 0, 0);
+    margin: 6px 0;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 19px;
+    background-color: rgb(31, 255, 255);
+    text-align: center;
+    outline: none;
+    border-radius: 25px;
+    
+    
+    
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    
+}
+
+button {
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: rgb(248, 166, 200);
+    outline: none;
+    cursor: pointer;
+    
+}
+
+.card a {
+    color: azure;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
+   
+}
+
+.submit-btn {
+    position: relative;
+
+}
+.submit-btn::after {
+    content: '\27a4';
+    color: aqua;
+    line-height: 32px;
+    font-size: 20px;
+    height: 32px;
+    width: 32px;
+    border-radius: 60%;
+    background: rgb(240, 4, 4);
+   
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+
+.card .btn{
+    margin-top: 70px;
+}
+
+.submit-btn {
+    margin-top: 20px;
+}
